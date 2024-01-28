@@ -1,4 +1,5 @@
 - Git clone copia de un repositorio ya existente a uno local. Esto se ha usado para hacer el fork del repositorio como se indicaba en el apartado de desarrollo de la práctica.
+
 - Git status indica los cambios que hay con el repositorio, en mi caso al estar editando el .txt este me salta el siguiente mensaje:
     @SantiagoArenas ➜ /workspaces/p1 (main) $ git status
 On branch main
@@ -9,10 +10,27 @@ Untracked files:
         git.txt
 
 nothing added to commit but untracked files present (use "git add" to track)
-- Git add es el paso previo al commit, añade los cambios. En este caso, cuando he hecho el add salta este mensaje:
+
+- Git add es el paso previo al commit, añade los cambios. Al ejecutar git add .  no salta ningún mensaje. 
 
 - Git commit confirma los cambios y crea una nueva versión del repositorio. 
+  @SantiagoArenas ➜ /workspaces/p1 (main) $ git commit -m "feat: homepage"
+  [main 49db877] feat: homepage
+  1 file changed, 18 insertions(+)
+  create mode 100644 git.txt
 
 - Git push sube los commits locales al repositorio remoto. Este es el último paso de la confirmación y los cambios se actualizan para todo el repositorio. 
+@SantiagoArenas ➜ /workspaces/p1 (main) $ git push origin main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 896 bytes | 896.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/SantiagoArenas/p1
+   f47ae51..49db877  main -> main
 
 - Git checkout sirve para cambiar de rama o restaurar archivos a un estado anterior en el historial del repositorio. Se puede hacer git checkout -b para crear la rama en caso de que no exista.
+@SantiagoArenas ➜ /workspaces/p1 (main) $ git checkout 
+M       git.txt
+Your branch is up to date with 'origin/main'.
